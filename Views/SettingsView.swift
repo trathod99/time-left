@@ -7,12 +7,13 @@ struct SettingsView: View {
         NavigationView {
             Form {
                 Section(header: Text("Age Settings")) {
-                    TextField("Current Age", text: $store.currentAge)
-                        .autocapitalization(.none)
-                        .keyboardType(.numberPad)
+                    DatePicker(
+                        "Birthday",
+                        selection: $store.birthday,
+                        displayedComponents: [.date]
+                    )
                     
-                    TextField("End Age", text: $store.endAge)
-                        .autocapitalization(.none)
+                    TextField("Target Age", text: $store.endAge)
                         .keyboardType(.numberPad)
                     
                     HStack {

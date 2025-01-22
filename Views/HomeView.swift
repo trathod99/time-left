@@ -11,7 +11,7 @@ struct HomeView: View {
                 LazyVGrid(columns: columns, spacing: 2) {
                     ForEach(0..<(store.endAgeValue * 52), id: \.self) { index in
                         Circle()
-                            .fill(Color.gray.opacity(0.3))
+                            .fill(index < store.weeksLived ? Color.black : Color.gray.opacity(0.3))
                             .frame(width: 5, height: 5)
                     }
                 }
