@@ -9,9 +9,21 @@ import SwiftUI
 
 @main
 struct Time_LeftApp: App {
+    @StateObject private var store = SettingsStore()
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            TabView {
+                HomeView(store: store)
+                    .tabItem {
+                        Label("Home", systemImage: "house")
+                    }
+                
+                SettingsView(store: store)
+                    .tabItem {
+                        Label("Settings", systemImage: "gear")
+                    }
+            }
         }
     }
 }

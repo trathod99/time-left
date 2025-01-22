@@ -6,6 +6,15 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		143FBA1D2D4080A5007113F5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 143FBA152D4080A5007113F5 /* Preview Assets.xcassets */; };
+		143FBA1E2D4080A5007113F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 143FBA172D4080A5007113F5 /* Assets.xcassets */; };
+		143FBA202D4080A5007113F5 /* Time_LeftApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143FBA182D4080A5007113F5 /* Time_LeftApp.swift */; };
+		143FBA242D4080C7007113F5 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143FBA222D4080C7007113F5 /* SettingsView.swift */; };
+		143FBA252D4080C7007113F5 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143FBA212D4080C7007113F5 /* HomeView.swift */; };
+		143FBA282D408129007113F5 /* SettingsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143FBA262D408129007113F5 /* SettingsStore.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		143FB9C92D402E6E007113F5 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -27,14 +36,16 @@
 		143FB9B82D402E6C007113F5 /* Time Left.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Time Left.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		143FB9C82D402E6E007113F5 /* Time LeftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Time LeftTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		143FB9D22D402E6E007113F5 /* Time LeftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Time LeftUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		143FBA152D4080A5007113F5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		143FBA172D4080A5007113F5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		143FBA182D4080A5007113F5 /* Time_LeftApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Time_LeftApp.swift; sourceTree = "<group>"; };
+		143FBA1A2D4080A5007113F5 /* Time Left.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = "Time Left.xcodeproj"; sourceTree = "<group>"; };
+		143FBA212D4080C7007113F5 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		143FBA222D4080C7007113F5 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		143FBA262D408129007113F5 /* SettingsStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		143FB9BA2D402E6C007113F5 /* Time Left */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = "Time Left";
-			sourceTree = "<group>";
-		};
 		143FB9CB2D402E6E007113F5 /* Time LeftTests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = "Time LeftTests";
@@ -75,7 +86,10 @@
 		143FB9AF2D402E6C007113F5 = {
 			isa = PBXGroup;
 			children = (
-				143FB9BA2D402E6C007113F5 /* Time Left */,
+				143FBA272D408129007113F5 /* Models */,
+				143FBA232D4080C7007113F5 /* Views */,
+				143FBA192D4080A5007113F5 /* Time Left */,
+				143FBA1A2D4080A5007113F5 /* Time Left.xcodeproj */,
 				143FB9CB2D402E6E007113F5 /* Time LeftTests */,
 				143FB9D52D402E6E007113F5 /* Time LeftUITests */,
 				143FB9B92D402E6C007113F5 /* Products */,
@@ -92,6 +106,46 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		143FBA162D4080A5007113F5 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				143FBA152D4080A5007113F5 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		143FBA192D4080A5007113F5 /* Time Left */ = {
+			isa = PBXGroup;
+			children = (
+				143FBA162D4080A5007113F5 /* Preview Content */,
+				143FBA172D4080A5007113F5 /* Assets.xcassets */,
+				143FBA182D4080A5007113F5 /* Time_LeftApp.swift */,
+			);
+			path = "Time Left";
+			sourceTree = "<group>";
+		};
+		143FBA1B2D4080A5007113F5 /* Products */ = {
+			isa = PBXGroup;
+			name = Products;
+			sourceTree = "<group>";
+		};
+		143FBA232D4080C7007113F5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				143FBA212D4080C7007113F5 /* HomeView.swift */,
+				143FBA222D4080C7007113F5 /* SettingsView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		143FBA272D408129007113F5 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				143FBA262D408129007113F5 /* SettingsStore.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -106,9 +160,6 @@
 			buildRules = (
 			);
 			dependencies = (
-			);
-			fileSystemSynchronizedGroups = (
-				143FB9BA2D402E6C007113F5 /* Time Left */,
 			);
 			name = "Time Left";
 			packageProductDependencies = (
@@ -198,6 +249,12 @@
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 143FB9B92D402E6C007113F5 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 143FBA1B2D4080A5007113F5 /* Products */;
+					ProjectRef = 143FBA1A2D4080A5007113F5 /* Time Left.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				143FB9B72D402E6C007113F5 /* Time Left */,
@@ -212,6 +269,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				143FBA1D2D4080A5007113F5 /* Preview Assets.xcassets in Resources */,
+				143FBA1E2D4080A5007113F5 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -236,6 +295,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				143FBA282D408129007113F5 /* SettingsStore.swift in Sources */,
+				143FBA202D4080A5007113F5 /* Time_LeftApp.swift in Sources */,
+				143FBA242D4080C7007113F5 /* SettingsView.swift in Sources */,
+				143FBA252D4080C7007113F5 /* HomeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
