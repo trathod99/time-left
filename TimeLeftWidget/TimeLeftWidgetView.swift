@@ -4,23 +4,37 @@ import WidgetKit
 struct TimeLeftWidgetView: View {
     let weeksThisYear: Int
     
-    private let columns = Array(repeating: GridItem(.fixed(12), spacing: 4), count: 10)
+    // Calculate sizes to fit widget bounds
+    private let dotSize: CGFloat = 10
+    private let dotSpacing: CGFloat = 4
+    private let horizontalPadding: CGFloat = 16
+    private let columns = Array(repeating: GridItem(.fixed(10), spacing: 4), count: 10)
     
     var body: some View {
-        VStack {
-            Text("Weeks this Year")
-                .font(.caption)
-                .padding(.bottom, 4)
+        VStack(alignment: .leading, spacing: 8) {
+            Text("Weeks Left")
+                .font(.custom("JetBrainsMono-ExtraBold", size: 16))
+                .padding(.leading, horizontalPadding)
+                .padding(.top, 16)
             
-            LazyVGrid(columns: columns, spacing: 4) {
+            LazyVGrid(columns: columns, spacing: dotSpacing) {
                 ForEach(0..<52, id: \.self) { index in
                     Circle()
-                        .fill(index < weeksThisYear ? Color.black : Color.gray.opacity(0.3))
-                        .frame(width: 12, height: 12)
+                        .fill(index < weeksThisYear ? Color.black : Color.gray.opacity(0.2))
+                        .frame(width: dotSize, height: dotSize)
                 }
             }
-            .padding(.horizontal, 8)
+            .padding(.horizontal, horizontalPadding)
+            Spacer(minLength: 16)
         }
-        .padding(.vertical, 8)
+        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
+        .background(Color.white)
+    }
+}
+
+struct TimeLeftWidgetView_Previews: PreviewProvider {
+    static var previews: some View {
+        TimeLeftWidgetView(weeksThisYear: 2)
+            .previewContext(WidgetPreviewContext(family: .systemSmall))
     }
 } 

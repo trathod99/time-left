@@ -18,6 +18,8 @@
 		143FBA412D408855007113F5 /* TimeLeftWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 143FBA2D2D408853007113F5 /* TimeLeftWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		143FBA4F2D408959007113F5 /* WidgetStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143FBA4D2D408959007113F5 /* WidgetStore.swift */; };
 		143FBA502D408959007113F5 /* WidgetStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143FBA4D2D408959007113F5 /* WidgetStore.swift */; };
+		143FBA532D40AC44007113F5 /* JetBrainsMono-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 143FBA522D40AC44007113F5 /* JetBrainsMono-ExtraBold.ttf */; };
+		143FBA542D40AC44007113F5 /* JetBrainsMono-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 143FBA522D40AC44007113F5 /* JetBrainsMono-ExtraBold.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +75,7 @@
 		143FBA2F2D408853007113F5 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		143FBA312D408853007113F5 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 		143FBA4D2D408959007113F5 /* WidgetStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetStore.swift; sourceTree = "<group>"; };
+		143FBA522D40AC44007113F5 /* JetBrainsMono-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "JetBrainsMono-ExtraBold.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -143,6 +146,7 @@
 		143FB9AF2D402E6C007113F5 = {
 			isa = PBXGroup;
 			children = (
+				143FBA512D40AC11007113F5 /* Fonts */,
 				143FBA4E2D408959007113F5 /* Shared */,
 				143FBA272D408129007113F5 /* Models */,
 				143FBA232D4080C7007113F5 /* Views */,
@@ -222,6 +226,14 @@
 				143FBA4D2D408959007113F5 /* WidgetStore.swift */,
 			);
 			path = Shared;
+			sourceTree = "<group>";
+		};
+		143FBA512D40AC11007113F5 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				143FBA522D40AC44007113F5 /* JetBrainsMono-ExtraBold.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -375,6 +387,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				143FBA542D40AC44007113F5 /* JetBrainsMono-ExtraBold.ttf in Resources */,
 				143FBA1D2D4080A5007113F5 /* Preview Assets.xcassets in Resources */,
 				143FBA1E2D4080A5007113F5 /* Assets.xcassets in Resources */,
 			);
@@ -398,6 +411,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				143FBA532D40AC44007113F5 /* JetBrainsMono-ExtraBold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
