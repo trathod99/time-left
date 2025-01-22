@@ -13,6 +13,11 @@
 		143FBA242D4080C7007113F5 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143FBA222D4080C7007113F5 /* SettingsView.swift */; };
 		143FBA252D4080C7007113F5 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143FBA212D4080C7007113F5 /* HomeView.swift */; };
 		143FBA282D408129007113F5 /* SettingsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143FBA262D408129007113F5 /* SettingsStore.swift */; };
+		143FBA302D408853007113F5 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 143FBA2F2D408853007113F5 /* WidgetKit.framework */; };
+		143FBA322D408853007113F5 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 143FBA312D408853007113F5 /* SwiftUI.framework */; };
+		143FBA412D408855007113F5 /* TimeLeftWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 143FBA2D2D408853007113F5 /* TimeLeftWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		143FBA4F2D408959007113F5 /* WidgetStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143FBA4D2D408959007113F5 /* WidgetStore.swift */; };
+		143FBA502D408959007113F5 /* WidgetStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143FBA4D2D408959007113F5 /* WidgetStore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,7 +35,28 @@
 			remoteGlobalIDString = 143FB9B72D402E6C007113F5;
 			remoteInfo = "Time Left";
 		};
+		143FBA3F2D408855007113F5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 143FB9B02D402E6C007113F5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 143FBA2C2D408853007113F5;
+			remoteInfo = TimeLeftWidgetExtension;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		143FBA462D408855007113F5 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				143FBA412D408855007113F5 /* TimeLeftWidgetExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		143FB9B82D402E6C007113F5 /* Time Left.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Time Left.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -43,7 +69,21 @@
 		143FBA212D4080C7007113F5 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		143FBA222D4080C7007113F5 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		143FBA262D408129007113F5 /* SettingsStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsStore.swift; sourceTree = "<group>"; };
+		143FBA2D2D408853007113F5 /* TimeLeftWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = TimeLeftWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		143FBA2F2D408853007113F5 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		143FBA312D408853007113F5 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		143FBA4D2D408959007113F5 /* WidgetStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		143FBA422D408855007113F5 /* Exceptions for "TimeLeftWidget" folder in "TimeLeftWidgetExtension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 143FBA2C2D408853007113F5 /* TimeLeftWidgetExtension */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		143FB9CB2D402E6E007113F5 /* Time LeftTests */ = {
@@ -54,6 +94,14 @@
 		143FB9D52D402E6E007113F5 /* Time LeftUITests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = "Time LeftUITests";
+			sourceTree = "<group>";
+		};
+		143FBA332D408853007113F5 /* TimeLeftWidget */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				143FBA422D408855007113F5 /* Exceptions for "TimeLeftWidget" folder in "TimeLeftWidgetExtension" target */,
+			);
+			path = TimeLeftWidget;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -80,18 +128,30 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		143FBA2A2D408853007113F5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				143FBA322D408853007113F5 /* SwiftUI.framework in Frameworks */,
+				143FBA302D408853007113F5 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		143FB9AF2D402E6C007113F5 = {
 			isa = PBXGroup;
 			children = (
+				143FBA4E2D408959007113F5 /* Shared */,
 				143FBA272D408129007113F5 /* Models */,
 				143FBA232D4080C7007113F5 /* Views */,
 				143FBA192D4080A5007113F5 /* Time Left */,
 				143FBA1A2D4080A5007113F5 /* Time Left.xcodeproj */,
 				143FB9CB2D402E6E007113F5 /* Time LeftTests */,
 				143FB9D52D402E6E007113F5 /* Time LeftUITests */,
+				143FBA332D408853007113F5 /* TimeLeftWidget */,
+				143FBA2E2D408853007113F5 /* Frameworks */,
 				143FB9B92D402E6C007113F5 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -102,6 +162,7 @@
 				143FB9B82D402E6C007113F5 /* Time Left.app */,
 				143FB9C82D402E6E007113F5 /* Time LeftTests.xctest */,
 				143FB9D22D402E6E007113F5 /* Time LeftUITests.xctest */,
+				143FBA2D2D408853007113F5 /* TimeLeftWidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -146,6 +207,23 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		143FBA2E2D408853007113F5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				143FBA2F2D408853007113F5 /* WidgetKit.framework */,
+				143FBA312D408853007113F5 /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		143FBA4E2D408959007113F5 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				143FBA4D2D408959007113F5 /* WidgetStore.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -156,10 +234,12 @@
 				143FB9B42D402E6C007113F5 /* Sources */,
 				143FB9B52D402E6C007113F5 /* Frameworks */,
 				143FB9B62D402E6C007113F5 /* Resources */,
+				143FBA462D408855007113F5 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				143FBA402D408855007113F5 /* PBXTargetDependency */,
 			);
 			name = "Time Left";
 			packageProductDependencies = (
@@ -214,6 +294,28 @@
 			productReference = 143FB9D22D402E6E007113F5 /* Time LeftUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		143FBA2C2D408853007113F5 /* TimeLeftWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 143FBA432D408855007113F5 /* Build configuration list for PBXNativeTarget "TimeLeftWidgetExtension" */;
+			buildPhases = (
+				143FBA292D408853007113F5 /* Sources */,
+				143FBA2A2D408853007113F5 /* Frameworks */,
+				143FBA2B2D408853007113F5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				143FBA332D408853007113F5 /* TimeLeftWidget */,
+			);
+			name = TimeLeftWidgetExtension;
+			packageProductDependencies = (
+			);
+			productName = TimeLeftWidgetExtension;
+			productReference = 143FBA2D2D408853007113F5 /* TimeLeftWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -234,6 +336,9 @@
 					143FB9D12D402E6E007113F5 = {
 						CreatedOnToolsVersion = 16.2;
 						TestTargetID = 143FB9B72D402E6C007113F5;
+					};
+					143FBA2C2D408853007113F5 = {
+						CreatedOnToolsVersion = 16.2;
 					};
 				};
 			};
@@ -260,6 +365,7 @@
 				143FB9B72D402E6C007113F5 /* Time Left */,
 				143FB9C72D402E6E007113F5 /* Time LeftTests */,
 				143FB9D12D402E6E007113F5 /* Time LeftUITests */,
+				143FBA2C2D408853007113F5 /* TimeLeftWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -288,6 +394,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		143FBA2B2D408853007113F5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -299,6 +412,7 @@
 				143FBA202D4080A5007113F5 /* Time_LeftApp.swift in Sources */,
 				143FBA242D4080C7007113F5 /* SettingsView.swift in Sources */,
 				143FBA252D4080C7007113F5 /* HomeView.swift in Sources */,
+				143FBA502D408959007113F5 /* WidgetStore.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -316,6 +430,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		143FBA292D408853007113F5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				143FBA4F2D408959007113F5 /* WidgetStore.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -328,6 +450,11 @@
 			isa = PBXTargetDependency;
 			target = 143FB9B72D402E6C007113F5 /* Time Left */;
 			targetProxy = 143FB9D32D402E6E007113F5 /* PBXContainerItemProxy */;
+		};
+		143FBA402D408855007113F5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 143FBA2C2D408853007113F5 /* TimeLeftWidgetExtension */;
+			targetProxy = 143FBA3F2D408855007113F5 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -575,6 +702,58 @@
 			};
 			name = Release;
 		};
+		143FBA442D408855007113F5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TimeLeftWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = TimeLeftWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Tyler-Rathod.Time-Left.TimeLeftWidget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		143FBA452D408855007113F5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TimeLeftWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = TimeLeftWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Tyler-Rathod.Time-Left.TimeLeftWidget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -610,6 +789,15 @@
 			buildConfigurations = (
 				143FB9E32D402E6E007113F5 /* Debug */,
 				143FB9E42D402E6E007113F5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		143FBA432D408855007113F5 /* Build configuration list for PBXNativeTarget "TimeLeftWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				143FBA442D408855007113F5 /* Debug */,
+				143FBA452D408855007113F5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
