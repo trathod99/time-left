@@ -16,6 +16,20 @@ final class SettingsStore: ObservableObject {
         return max(0, components.weekOfYear ?? 0)
     }
     
+    var weeksThisYear: Int {
+        let calendar = Calendar.current
+        let currentYear = calendar.component(.year, from: Date())
+        let startOfYear = calendar.date(from: DateComponents(year: currentYear))!
+        let components = calendar.dateComponents([.weekOfYear], from: startOfYear, to: Date())
+        return max(0, components.weekOfYear ?? 0)
+    }
+    
+    var monthsLived: Int {
+        let calendar = Calendar.current
+        let components = calendar.dateComponents([.month], from: birthday, to: Date())
+        return max(0, components.month ?? 0)
+    }
+    
     var endAgeValue: Int {
         return Int(endAge) ?? 0
     }
@@ -26,5 +40,9 @@ final class SettingsStore: ObservableObject {
     
     var weeksRemaining: Int {
         return yearsRemaining * 52
+    }
+    
+    var monthsRemaining: Int {
+        return yearsRemaining * 12
     }
 } 
