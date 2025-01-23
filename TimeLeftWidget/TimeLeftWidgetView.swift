@@ -10,9 +10,16 @@ struct TimeLeftWidgetView: View {
     private let horizontalPadding: CGFloat = 16
     private let columns = Array(repeating: GridItem(.fixed(10), spacing: 4), count: 10)
     
+    // Get current year
+    private var currentYear: String {
+        let calendar = Calendar.current
+        let year = calendar.component(.year, from: Date())
+        return String(year)
+    }
+    
     var body: some View {
         VStack(alignment: .leading, spacing: 8) {
-            Text("Weeks Left")
+            Text("Weeks of \(currentYear)")
                 .font(.custom("JetBrainsMono-ExtraBold", size: 16))
                 .padding(.leading, horizontalPadding)
                 .padding(.top, 16)

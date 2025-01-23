@@ -11,6 +11,7 @@ import SwiftUI
 @main
 struct TimeLeftWidgetBundle: WidgetBundle {
     var body: some Widget {
-        TimeLeftWidget()
+        YearWeeksWidget()
+        LifeWeeksWidget()
     }
 }
